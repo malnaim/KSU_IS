@@ -75,16 +75,14 @@ docker container start is_dev
 docker attach is_dev
 ```
 ## Container and Image Management
-```
+``` bash
 docker container ls -a
 docker images 
+docker push malnaim/ksu_is:v1
 docker container rm is_dev
 docker rmi <image_name>
-docker push 
 ```
 ## Redirection: Docker Container Ports
 ## Redirection: Docker Container Volumes
-## Choose Your Own Adventure: Where Do I Go from Here?
-## Hands-On Lab:
-## Working with Docker Images
-## Course Incomplete
+
+

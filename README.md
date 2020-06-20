@@ -55,11 +55,19 @@ docker run -it --name is_dev ubuntu:16.04
 * install python and nano in the container
 ``` bash
 apt update
-apt install -y nano python
+apt install -y nano python nginx
+# Nginx example
+nano nano /var/www/html/index.nginx-debian.html
+service nginx start
+nginx -s reload
+service nginx reload
+# Python example 
 nano hello.py
 # add the two lines in to the python script
+#####
 #!/usr/bin/env python
 print("Hello IS Students !")
+#####
 # now exit and make the script executable
 chmod +x hello.py
 python hello.py
@@ -82,7 +90,18 @@ docker push malnaim/ksu_is:v1
 docker container rm is_dev
 docker rmi <image_name>
 ```
-## Redirection: Docker Container Ports
-## Redirection: Docker Container Volumes
-
-
+## Docker Container Ports
+``` bash
+docker run -itp 8080:80 --name is_dev ubuntu:16.04
+``` 
+## Docker Container Volumes
+``` bash 
+docker run -itp 8080:80 --volume /home/USER/Code/KSU_IS/html:/var/www/html:ro --name is_dev ubuntu:16.04
+```
+----
+### Docker remove commands
+``` bash
+docker stop (docker ps -a -q)
+docker rm (docker ps -aq)
+docker rmi (docker images -aq)
+```

@@ -99,9 +99,13 @@ docker run -itp 8080:80 --name is_dev ubuntu:16.04
 docker run -itp 8080:80 --volume /home/USER/Code/KSU_IS/html:/var/www/html:ro --name is_dev ubuntu:16.04
 ```
 ----
+# Resources 
 ### Docker remove commands
 ``` bash
 docker stop (docker ps -a -q)
 docker rm (docker ps -aq)
 docker rmi (docker images -aq)
 ```
+* <https://labs.play-with-docker.com/>
+* <https://code.visualstudio.com/docs/containers/quickstart-node>
+* <https://www.docker.com/101-tutorial>

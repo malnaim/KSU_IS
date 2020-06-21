@@ -112,3 +112,5 @@ docker rmi (docker images -aq)
 * <https://www.docker.com/101-tutorial>
 * <https://github.com/IBMStockTrader/portfolio>
 * <https://hub.docker.com/r/ibmstocktrader/portfolio>
+* <https://cloud.linode.com>
+* <https://github.com/malnaim/KSU_IS>

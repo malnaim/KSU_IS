@@ -8,7 +8,7 @@ KSU IS
 ```
 ## Course Introduction
   * What is Docker ?
-  
+
 ## Installation and Configuration: 
   * Linux (Ubuntu, Debian, CentOS, Fedora, Raspbian ... etc) <https://docs.docker.com/engine/install/> 
   * MacOS got to <https://hub.docker.com/editions/community/docker-ce-desktop-mac/>

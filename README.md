@@ -119,7 +119,7 @@ WORKDIR /app   # change to app directory
 COPY server.js .
 USER node
 EXPOSE 8000
-CMD ["npm", "run", "start:dev"]
+CMD ["node", "server.js"]
 ```
 * Build the image 
 ```bash

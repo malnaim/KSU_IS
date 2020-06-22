@@ -99,6 +99,36 @@ docker run -itp 8080:80 --name is_dev ubuntu:16.04
 ``` bash 
 docker run -itp 8080:80 --volume /home/USER/Code/KSU_IS/html:/var/www/html:ro --name is_dev ubuntu:16.04
 ```
+## **UPDATE Nodejs Docker app Example**
+* First let's create our first Javascript file called "server.js" and write the following javascript code :
+``` javascript
+var http = require('http');
+
+function onRequest(request, response) {
+    response.writeHead(200, {'Content-Type': 'text/plain'});
+    response.write('Hello KSU Students');
+    response.end();
+}
+
+http.createServer(onRequest).listen(8000); 
+```
+* Create our Dockerfile and *COPY* our code into the Dockerfile
+``` Dockerfile
+FROM node
+WORKDIR /app   # change to app directory 
+COPY server.js .
+USER node
+EXPOSE 8000
+CMD ["npm", "run", "start:dev"]
+```
+* Build the image 
+```bash
+docker build -t js:latest .
+```
+* Run the container 
+``` bash
+docker run -itp 8080:8000 --name js_server js
+```
 ----
 # Resources 
 ### Docker remove commands
